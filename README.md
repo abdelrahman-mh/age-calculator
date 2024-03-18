@@ -8,7 +8,7 @@ This app includes Unit Test with Jest, Eslint and best Practice, Form Validation
 
 ## Usage
 
-You need to close the App first
+You need to clone the App first
 
 - Run dev server:
 
@@ -50,4 +50,4 @@ You need to close the App first
 
 ## Links
 
-[Website](test)
+[Website](https://abdelrahman-mh.github.io/age-calculator/)
