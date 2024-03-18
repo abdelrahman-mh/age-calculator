@@ -9,7 +9,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "NODE_ENV=test jest --verbose --runInBand",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "rm -rf ./dist && npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.2.0",
