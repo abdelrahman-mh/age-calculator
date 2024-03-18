@@ -1,0 +1,92 @@
+.calc-form {
+  position: relative;
+  &__form-items {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    align-content: center;
+
+    @include breakpoint-up('large') {
+      justify-content: flex-start;
+      gap: 32px;
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    max-width: 160px;
+    border-radius: 7px;
+
+    font-weight: 700;
+
+    border: 1px solid $light-grey;
+    color: $off-black;
+    caret-color: $purple;
+
+    font-size: 20px;
+    padding-block: 11px;
+    padding-inline: 16px;
+
+    box-sizing: border-box;
+
+    @include breakpoint-up('large') {
+      padding-inline: 25px;
+      font-size: $f-body;
+    }
+    &::placeholder {
+      color: $smokey-grey;
+    }
+    &:focus {
+      border-color: $purple;
+    }
+    &.error {
+      caret-color: $light-red;
+      border-color: $light-red;
+    }
+  }
+  &__input-label {
+    display: block;
+    font-weight: 700;
+    color: $smokey-grey;
+    font-size: 15px;
+    margin-bottom: 9px;
+    @include breakpoint-up('large') {
+      font-size: 17px;
+      margin-bottom: 14px;
+    }
+    &.error {
+      color: $light-red;
+    }
+  }
+
+  &__input-error {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    color: $light-red;
+    font-style: italic;
+    margin-top: 12px;
+    text-wrap: wrap;
+  }
+  &__form-submit-button {
+    margin-inline: auto;
+    margin-top: 32px;
+    @include breakpoint-up('large') {
+      margin: {
+        right: 0;
+        top: 0;
+        left: auto;
+      }
+    }
+  }
+  &__form-line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: $off-white;
+    left: 0;
+    z-index: 10;
+  }
+}

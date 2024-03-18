@@ -1,0 +1,36 @@
+$base-rad: 20px;
+$rad-bottom-right: 188px;
+$rad-bottom-right-mobile: 100px;
+
+#root {
+  width: 100%;
+  max-width: 840px;
+  background-color: $white;
+  position: relative;
+  margin-inline: auto;
+
+  overflow: hidden;
+  padding: {
+    left: 24px;
+    right: 24px;
+    bottom: 44px;
+    top: 52px;
+  }
+  border: {
+    top-left-radius: $base-rad;
+    top-right-radius: $base-rad;
+    bottom-left-radius: $base-rad;
+    bottom-right-radius: $rad-bottom-right-mobile;
+  }
+  @include breakpoint-up('medium') {
+    padding: {
+      left: 56px;
+      right: 56px;
+      bottom: 49px;
+      top: 61px;
+    }
+    border: {
+      bottom-right-radius: $rad-bottom-right;
+    }
+  }
+}

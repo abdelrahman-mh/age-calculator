@@ -1,0 +1,24 @@
+.calc-output {
+  margin-top: 40px;
+  @include breakpoint-up('large') {
+    margin-top: 14px;
+  }
+  &__item {
+    span {
+      display: inline;
+      text-align: left;
+      font-size: 55px;
+      @include breakpoint-up('large') {
+        font-size: 105px;
+      }
+      font-style: italic;
+      font-weight: 800;
+    }
+  }
+  &__item-value {
+    color: $purple;
+  }
+  &__item-felid {
+    color: $off-black;
+  }
+}

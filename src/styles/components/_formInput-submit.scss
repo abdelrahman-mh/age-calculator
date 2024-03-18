@@ -1,0 +1,93 @@
+$submitBTN-nested-item-size-tablet: 24px;
+$submitBTN-nested-item-size: 44px;
+
+$submitBTN-nested-item-width-tablet: 1px;
+$submitBTN-nested-item-width: 2px;
+
+$submitBTN-size: 96px;
+$submitBTN-size-tablet: 64px;
+
+@include breakpoint-up('large') {
+}
+
+.calc-form__form-submit-button {
+  width: $submitBTN-size-tablet;
+  height: $submitBTN-size-tablet;
+  border-radius: 50%;
+  background-color: $purple;
+  position: relative;
+  display: block;
+  transition: 50ms;
+  z-index: 20;
+
+  &:hover {
+    background-color: $off-black;
+  }
+
+  span {
+    position: absolute;
+    box-sizing: border-box;
+    top: 50%;
+  }
+
+  span:nth-child(1) {
+    width: $submitBTN-nested-item-width-tablet;
+    height: $submitBTN-nested-item-size-tablet;
+    background-color: $white;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  span:nth-child(2),
+  span:nth-child(3) {
+    width: $submitBTN-nested-item-size-tablet;
+    height: $submitBTN-nested-item-size-tablet;
+    background-color: transparent;
+    border: $submitBTN-nested-item-width-tablet solid transparent;
+    border-top-color: $white;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+
+  span:nth-child(2) {
+    left: calc(50% - ($submitBTN-nested-item-width-tablet / 2));
+    transform: rotate(-45deg);
+  }
+
+  span:nth-child(3) {
+    transform: rotate(45deg);
+    right: calc(50% - ($submitBTN-nested-item-width-tablet / 2));
+  }
+
+  & + span.calc-form__form-line {
+    bottom: calc($submitBTN-size-tablet / 2 - 1px);
+  }
+
+  // for large screens
+  @include breakpoint-up('large') {
+    width: $submitBTN-size;
+    height: $submitBTN-size;
+    span:nth-child(1) {
+      width: $submitBTN-nested-item-width;
+      height: $submitBTN-nested-item-size;
+    }
+
+    span:nth-child(2),
+    span:nth-child(3) {
+      width: $submitBTN-nested-item-size;
+      height: $submitBTN-nested-item-size;
+      border-width: $submitBTN-nested-item-width;
+    }
+
+    span:nth-child(2) {
+      left: calc(50% - ($submitBTN-nested-item-width / 2));
+    }
+
+    span:nth-child(3) {
+      right: calc(50% - ($submitBTN-nested-item-width / 2));
+    }
+    & + span.calc-form__form-line {
+      bottom: calc($submitBTN-size / 2 - 1px);
+    }
+  }
+}
