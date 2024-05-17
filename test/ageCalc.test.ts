@@ -1,4 +1,4 @@
-import { calculateAge } from '../src/helper'
+import { calculateAge } from '../src/utils/helper'
 
 describe('calculateAge function', () => {
   test('should calculate age correctly for today', () => {

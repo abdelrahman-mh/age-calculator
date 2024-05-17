@@ -8,8 +8,11 @@ This app includes Unit Test with Jest, Eslint and best Practice, Form Validation
 
 ## Usage
 
-You need to clone the App first
-
+- Clone the project and navigate to it:
+  ```shell
+  git clone https://github.com/abdelrahman-mh/age-calculator
+  cd age-calculator
+  ```
 - Run dev server:
 
   ```shell
@@ -46,7 +49,7 @@ You need to clone the App first
   npm run deploy
   ```
 
-  > will remove `dist` if exist & build the app & deploy it via github pages, using `gh-pages` lib
+  > This script will remove `dist` if exist & build the app & deploy it via github pages, using `gh-pages` lib
 
 ## Links
 
