@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import validateDate, { invalidMessage, requiredMessage, pastMessage, invalidDate } from '../src/validate'
+import validateDate, { invalidMessage, requiredMessage, pastMessage, invalidDate } from '../src/utils/validate'
 import { generateDateWithInvalidDay, generateFutureYear, generatePastDate, generateFutureDate } from './helper'
 
 describe('validateDate function', () => {

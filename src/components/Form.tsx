@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import validateDate from '../validate'
-import { FormData, ErrorFields, ValidFormData } from '../types'
+import validateDate from '../utils/validate'
+import { FormData, ErrorFields, ValidFormData } from '../utils/types'
 
 interface Props {
   calc: (formData: ValidFormData) => void

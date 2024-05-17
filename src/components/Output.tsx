@@ -1,5 +1,5 @@
 import React from 'react'
-import { AgeOutput } from '../types'
+import { AgeOutput } from '../utils/types'
 
 interface Props {
   date: AgeOutput
